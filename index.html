@@ -3,311 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ezra Bazilevsky — Graphic Designer, Washington DC</title>
-    <meta
-      name="description"
-      content="Ezra Bazilevsky is a graphic designer based in Washington, DC, crafting brand identities, packaging, logo systems, and illustration-led visual work."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Ezra Bazilevsky — Graphic Designer</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="cursor"></div>
-
-    <div class="nav-mobile" id="mobileNav">
-      <a href="#work" onclick="closeMobile()">Work</a>
-      <a href="#about" onclick="closeMobile()">About</a>
-      <a href="#services" onclick="closeMobile()">Services</a>
-      <a href="#links" onclick="closeMobile()">Links</a>
-      <a href="#footer" onclick="closeMobile()">Contact</a>
-    </div>
-
     <nav>
-      <a href="#" class="nav-logo">Ezra Bazilevsky</a>
-      <ul class="nav-links">
+      <a href="#" class="logo">Ezra Bazilevsky</a>
+      <ul>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#links">Links</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
 
     <div class="hero">
-      <div class="hero-bg"></div>
-      <p class="hero-sub">Graphic Designer · Washington, DC</p>
-      <h1>Builds brands<br />with <em>clarity</em><br />and character.</h1>
+      <img class="hero-photo" src="ip-ezbaz_hero.jpg" alt="Ezra Bazilevsky hero artwork" />
+      <div class="hero-eyebrow">Graphic designer • Washington, DC</div>
+      <h1>Ezra Bazilevsky<br /><em>builds brands</em> with clarity and character.</h1>
       <span class="hero-scroll">Scroll down</span>
     </div>
 
-    <section>
-      <div class="intro-grid">
-        <div class="intro-body reveal">
-          <p>
-            Ezra Bazilevsky is a graphic designer working under the name ezbaz — crafting brand
-            identities, packaging, logo systems, and illustration-led visual work that is
-            distinctive, considered, and built to last.
-          </p>
-          <br />
-          <a href="#work" class="text-link">See selected work <span class="arr">→</span></a>
-        </div>
-        <div class="intro-meta reveal">
-          <div class="intro-stat">
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Years of practice</div>
-          </div>
-          <div class="intro-stat">
-            <div class="stat-num">DC</div>
-            <div class="stat-label">Based in Washington, DC · Remote available</div>
-          </div>
-          <div class="intro-stat">
-            <div class="stat-num">2014</div>
-            <div class="stat-label">Behance member since</div>
-          </div>
-        </div>
+    <section class="intro" id="about">
+      <p class="reveal">
+        Ezra Bazilevsky is a graphic designer working under the name ezbaz, with a public
+        portfolio presence spanning branding, packaging, logo systems, and illustration-led visual
+        work.
+      </p>
+      <div class="intro-meta reveal">
+        <div><span>DC</span><br />Based in Washington, DC, USA</div>
+        <div><span>2014</span><br />Behance member since October 12, 2014</div>
+        <div><span>Remote</span><br />Available for full-time remote opportunities</div>
       </div>
     </section>
 
-    <section id="work">
-      <div class="section-head reveal">
-        <span class="eyebrow">Selected Work</span>
-        <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="text-link"
-          >All projects on Behance <span class="arr">→</span></a
-        >
-      </div>
-
+    <section class="work" id="work">
+      <p class="section-label reveal">Selected Work</p>
       <div class="projects-grid">
         <div class="project-card reveal">
-          <div class="thumb">
+          <div class="img-wrap">
             <img
               src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=1200&q=80"
-              alt="Lumē Deodorant packaging"
+              alt="Packaging design concept"
             />
           </div>
           <div class="project-info">
-            <div class="project-info-left">
-              <div class="budget">Packaging · Branding</div>
+            <div>
+              <div class="budget">Packaging</div>
               <h3>Deodorant packaging concept for Lumē Deodorant</h3>
             </div>
-            <div class="project-tags">
-              <span class="tag">Packaging</span>
-              <span class="tag">Print</span>
-            </div>
+            <div class="project-tags"><span class="tag">Branding</span></div>
           </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="thumb">
+          <div class="img-wrap">
             <img
               src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80"
-              alt="JRI Cards logo"
+              alt="Card brand identity concept"
             />
           </div>
           <div class="project-info">
-            <div class="project-info-left">
-              <div class="budget">Identity · Logo</div>
+            <div>
+              <div class="budget">Identity</div>
               <h3>Logo for JRI Cards</h3>
             </div>
             <div class="project-tags">
-              <span class="tag">Logo</span>
-              <span class="tag">Brand System</span>
+              <span class="tag">Logo</span><span class="tag">Brand System</span>
             </div>
           </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="thumb">
+          <div class="img-wrap">
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-              alt="Wellness Web Media"
+              alt="Media brand identity concept"
             />
           </div>
           <div class="project-info">
-            <div class="project-info-left">
-              <div class="budget">Identity · Digital</div>
-              <h3>Logo for Wellness Web Media</h3>
+            <div>
+              <div class="budget">Identity</div>
+              <h3>Logo for WELLNESS WEB MEDIA</h3>
             </div>
-            <div class="project-tags">
-              <span class="tag">Logo</span>
-              <span class="tag">Digital</span>
-            </div>
+            <div class="project-tags"><span class="tag">Logo</span><span class="tag">Digital</span></div>
           </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="thumb">
+          <div class="img-wrap">
             <img
               src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1400&q=80"
-              alt="Dr. Oleg Kucheryavenko illustrations"
+              alt="Illustration system concept"
             />
           </div>
           <div class="project-info">
-            <div class="project-info-left">
-              <div class="budget">Illustration · Editorial</div>
+            <div>
+              <div class="budget">Illustration</div>
               <h3>Illustrations for the website of Dr. Oleg Kucheryavenko</h3>
             </div>
             <div class="project-tags">
-              <span class="tag">Illustration</span>
-              <span class="tag">Web</span>
+              <span class="tag">Illustration</span><span class="tag">Web</span><span class="tag">Editorial</span>
             </div>
           </div>
         </div>
 
         <div class="project-card reveal">
-          <div class="thumb">
+          <div class="img-wrap">
             <img
-              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=1600&q=80"
-              alt="Web Friendly brand guide"
+              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=900&q=80"
+              alt="Brand guideline concept"
             />
           </div>
           <div class="project-info">
-            <div class="project-info-left">
-              <div class="budget">Brand Guide · Logo</div>
+            <div>
+              <div class="budget">Brand Guide</div>
               <h3>Logo &amp; Brand Guide for Web Friendly</h3>
             </div>
-            <div class="project-tags">
-              <span class="tag">Guidelines</span>
-              <span class="tag">Identity</span>
-            </div>
+            <div class="project-tags"><span class="tag">Guidelines</span></div>
           </div>
         </div>
       </div>
-
-      <div class="work-footer reveal">
-        <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="text-link"
-          >See full Behance portfolio <span class="arr">→</span></a
-        >
-      </div>
+      <a href="https://www.behance.net/ezbaz?locale=en_US" class="see-all reveal" target="_blank" rel="noreferrer">See Behance portfolio →</a>
     </section>
 
-    <section id="services">
-      <div class="section-head reveal">
-        <span class="eyebrow">Practice</span>
-      </div>
-      <div class="services-list reveal">
-        <div class="service-row">
-          <div class="service-name">Logo Design</div>
-          <div class="service-desc">
-            "Brand identities shaped for clarity, memorability, and immediate recognition."
-          </div>
-          <div class="service-num">01</div>
+    <section class="testimonials" id="services">
+      <p class="section-label reveal">Practice</p>
+      <div class="testimonials-inner">
+        <div class="testimonial reveal">
+          <q>Brand identities shaped for clarity, memorability, and immediate recognition.</q>
+          <cite>Logo Design<span>Marks, systems, and extensions for growing brands</span></cite>
         </div>
-        <div class="service-row">
-          <div class="service-name">Packaging</div>
-          <div class="service-desc">
-            "Packaging and visual concepts that turn everyday products into tangible brand
-            stories."
-          </div>
-          <div class="service-num">02</div>
+        <div class="testimonial reveal">
+          <q>Packaging and visual concepts that turn everyday products into tangible brand stories.</q>
+          <cite>Packaging<span>Concept-first visual language and product presentation</span></cite>
         </div>
-        <div class="service-row">
-          <div class="service-name">Illustration</div>
-          <div class="service-desc">
-            "Custom visuals for websites, campaigns, and content that bring editorial touchpoints
-            to life."
-          </div>
-          <div class="service-num">03</div>
-        </div>
-        <div class="service-row">
-          <div class="service-name">Brand Systems</div>
-          <div class="service-desc">
-            "Complete visual language guidelines that grow with your brand across every medium."
-          </div>
-          <div class="service-num">04</div>
+        <div class="testimonial reveal">
+          <q>Illustration and digital assets that bring editorial and marketing touchpoints to life.</q>
+          <cite>Illustration<span>Custom visuals for websites, campaigns, and content</span></cite>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="about-grid">
-        <div class="about-body reveal">
-          <h2>About Ezra's<br /><em>design practice.</em></h2>
+    <section class="pricing">
+      <div class="pricing-inner">
+        <div class="reveal">
+          <h2>About Ezra’s design practice.</h2>
           <p>
-            Ezra Bazilevsky is a graphic designer based in Washington, DC, working under the
-            handle ezbaz. His practice spans brand identity, packaging, logo systems, and
-            illustration-forward visual work — balancing clean composition with expressive,
-            client-facing polish.
+            Public profiles describe Ezra as a graphic designer based in Washington, DC, using the
+            ezbaz handle and portfolio site, and open to full-time remote opportunities.
           </p>
-          <p>Available for full-time remote opportunities and selective freelance engagements.</p>
-          <br />
-          <a href="https://ezbaz.com/contact" class="text-link" target="_blank" rel="noreferrer"
-            >Get in touch <span class="arr">→</span></a
-          >
+          <a href="https://ezbaz.com/contact" class="btn-link" target="_blank" rel="noreferrer">Get in touch →</a>
         </div>
-        <div class="about-meta reveal">
-          <div class="meta-row">
-            <span class="meta-key">Location</span>
-            <span class="meta-val">Washington, DC, USA</span>
-          </div>
-          <div class="meta-row">
-            <span class="meta-key">Availability</span>
-            <span class="meta-val">Open to remote roles</span>
-          </div>
-          <div class="meta-row">
-            <span class="meta-key">Focus</span>
-            <span class="meta-val">Branding · Packaging · Illustration</span>
-          </div>
-          <div class="meta-row">
-            <span class="meta-key">On Behance since</span>
-            <span class="meta-val">October 2014</span>
-          </div>
-          <div class="meta-row">
-            <span class="meta-key">Website</span>
-            <span class="meta-val"><a href="https://ezbaz.com">ezbaz.com</a></span>
-          </div>
+        <div class="reveal">
+          <p class="pricing-side-copy">
+            The body of work highlighted publicly focuses on logos, branding guidelines,
+            packaging, and illustration-forward visual systems — balancing clean composition with
+            expressive, client-facing polish.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="links">
-      <div class="section-head reveal">
-        <span class="eyebrow">Platforms &amp; Links</span>
+    <section class="clients" id="links">
+      <h2 class="reveal">Platforms &amp; Links</h2>
+      <div class="client-logos reveal">
+        <span class="client-name">ezbaz.com</span>
+        <span class="client-name">Behance</span>
+        <span class="client-name">Instagram</span>
+        <span class="client-name">LinkedIn</span>
+        <span class="client-name">Washington, DC</span>
+        <span class="client-name">Graphic Design</span>
+        <span class="client-name">Brand Identity</span>
+        <span class="client-name">Packaging</span>
+        <span class="client-name">Illustration</span>
+        <span class="client-name">Remote Friendly</span>
       </div>
-      <div class="links-grid reveal">
-        <div class="link-item">
-          <div class="link-platform">Portfolio</div>
-          <div class="link-title">ezbaz.com</div>
-          <div class="link-desc">Main portfolio and contact page with full project range</div>
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer" class="link-go"
-            >Visit <span>→</span></a
-          >
+    </section>
+
+    <section class="knowledge">
+      <p class="section-label reveal">Highlights</p>
+      <div class="knowledge-grid">
+        <div class="knowledge-card reveal">
+          <div class="img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80"
+              alt="Branding process"
+            />
+          </div>
+          <div class="knowledge-card-info">
+            <p class="cat">Recent Work</p>
+            <h3>Identity systems, logos, and visual guidelines published on Behance</h3>
+          </div>
         </div>
-        <div class="link-item">
-          <div class="link-platform">Case Studies</div>
-          <div class="link-title">Behance</div>
-          <div class="link-desc">Full archive of identity, packaging, and illustration work</div>
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="link-go"
-            >Visit <span>→</span></a
-          >
+        <div class="knowledge-card reveal">
+          <div class="img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80"
+              alt="Creative collaboration"
+            />
+          </div>
+          <div class="knowledge-card-info">
+            <p class="cat">Contact</p>
+            <h3>Public contact page available through ezbaz.com for direct inquiries</h3>
+          </div>
         </div>
-        <div class="link-item">
-          <div class="link-platform">Professional</div>
-          <div class="link-title">LinkedIn</div>
-          <div class="link-desc">Work history, skills, and professional connections</div>
-          <a
-            href="https://www.linkedin.com/in/ezrabazilevsky/"
-            target="_blank"
-            rel="noreferrer"
-            class="link-go"
-            >Visit <span>→</span></a
-          >
-        </div>
-        <div class="link-item">
-          <div class="link-platform">Social</div>
-          <div class="link-title">Instagram</div>
-          <div class="link-desc">Process shots, work-in-progress, and design inspiration</div>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="link-go"
-            >Visit <span>→</span></a
-          >
-        </div>
+      </div>
+      <a href="https://ezbaz.com/contact" class="see-all reveal knowledge-link" target="_blank" rel="noreferrer">Open contact page →</a>
+    </section>
+
+    <section class="newsletter">
+      <div class="reveal">
+        <h2>Follow Ezra’s <em>portfolio</em></h2>
+        <p class="newsletter-copy">
+          Visit public profiles and portfolio links to explore branding, packaging, logo, and
+          illustration work.
+        </p>
+      </div>
+      <div class="newsletter-form reveal">
+        <input type="text" value="https://www.behance.net/ezbaz?locale=en_US" readonly />
+        <button type="button" onclick="window.open('https://ezbaz.com/contact', '_blank', 'noopener')">Visit contact page →</button>
+        <p class="disclaimer">
+          This page was adapted from publicly accessible portfolio information on Behance and
+          ezbaz.com because the LinkedIn profile itself is not fully readable without sign-in.
+        </p>
       </div>
     </section>
 
@@ -318,78 +242,63 @@
           Ezra Bazilevsky / ezbaz<br />
           Washington, DC, USA<br /><br />
           <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a><br />
-          <a href="mailto:hello@ezbaz.com">hello@ezbaz.com</a>
+          <a href="https://www.behance.net/ezbaz?locale=en_US" target="_blank" rel="noreferrer">Behance profile</a>
         </address>
       </div>
       <div>
-        <h4>Inquiries</h4>
-        <address>
-          Open to freelance projects<br />
-          and full-time remote roles.<br /><br />
-          <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer"
-            >Contact page →</a
-          >
-        </address>
+        <h4>Focus</h4>
+        <div class="contact-person">
+          <div class="contact-person-info">
+            <strong>Graphic Design</strong>
+            Branding, logos, packaging, and illustration-led digital work<br />
+            <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Direct inquiry form</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Availability</h4>
+        <div class="contact-person">
+          <div class="contact-person-info">
+            <strong>Open to remote roles</strong>
+            Behance lists full-time availability and interest in remote opportunities<br />
+            <a href="https://www.behance.net/ezbaz?locale=en_US" target="_blank" rel="noreferrer">View public profile</a>
+          </div>
+        </div>
       </div>
       <div>
         <h4>Connect</h4>
-        <div class="footer-social">
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a>
-          <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer"
-            >LinkedIn</a
-          >
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/ezbaz?locale=en_US" target="_blank" rel="noreferrer">Behance</a>
+          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">Website</a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Ezra Bazilevsky. All rights reserved.</span>
-        <div class="footer-bottom-links">
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a>
+        <p>Portfolio page tailored for Ezra Bazilevsky using public portfolio information.</p>
+        <div class="footer-links">
+          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">Website</a>
           <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Contact</a>
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a>
+          <a href="https://www.behance.net/ezbaz?locale=en_US" target="_blank" rel="noreferrer">Behance</a>
+          <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
     </footer>
 
     <script>
-      const cursor = document.getElementById("cursor");
-      document.addEventListener("mousemove", (event) => {
-        cursor.style.left = `${event.clientX}px`;
-        cursor.style.top = `${event.clientY}px`;
-      });
-      document.querySelectorAll("a, button, .project-card, .service-row, .link-item").forEach((element) => {
-        element.addEventListener("mouseenter", () => cursor.classList.add("expand"));
-        element.addEventListener("mouseleave", () => cursor.classList.remove("expand"));
-      });
-
-      const io = new IntersectionObserver(
+      const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add("visible"), index * 70);
-              io.unobserve(entry.target);
+              setTimeout(() => entry.target.classList.add("visible"), index * 80);
+              observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.08 }
+        { threshold: 0.1 }
       );
-      document.querySelectorAll(".reveal").forEach((element) => io.observe(element));
 
-      function toggleMobile() {
-        document.getElementById("mobileNav").classList.toggle("open");
-      }
-      function closeMobile() {
-        document.getElementById("mobileNav").classList.remove("open");
-      }
-
-      const nav = document.querySelector("nav");
-      window.addEventListener("scroll", () => {
-        nav.style.background = window.scrollY > 60 ? "rgba(11,11,9,0.92)" : "transparent";
-        nav.style.backdropFilter = window.scrollY > 60 ? "blur(12px)" : "none";
-        nav.style.transition = "background 0.4s, backdrop-filter 0.4s, padding 0.4s";
-        nav.style.padding = window.scrollY > 60 ? "18px 52px" : "32px 52px";
-      });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
     </script>
   </body>
 </html>
