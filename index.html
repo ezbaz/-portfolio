@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezra Bazilevsky — Washington DC Portfolio</title>
+    <meta
+      name="description"
+      content="Ezra Bazilevsky is based in Washington, DC and creates brand identities, packaging, logo systems, and illustration-led visual work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="cursor"></div>
+
+    <div class="nav-mobile" id="mobileNav">
+      <a href="#work" onclick="closeMobile()">Work</a>
+      <a href="#approach" onclick="closeMobile()">Approach</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+
+    <nav>
+      <a href="#" class="nav-logo">Ezra Bazilevsky</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <p class="hero-sub">ezbaz</p>
+      <h1>Design Partner<br />for High-Stakes<br /><em>Visual Systems</em></h1>
+      <p class="hero-copy">
+        ezbaz helps brands solve visible and hidden communication problems through identity,
+        packaging, campaigns, and strategic visual systems.
+      </p>
+      <a href="#work" class="text-link hero-cta">View Selected Work <span class="arr">→</span></a>
+      <span class="hero-scroll">Scroll down</span>
+    </div>
+
+    <section id="work">
+      <div class="section-head reveal">
+        <span class="eyebrow">Selected Work</span>
+        <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="text-link"
+          >All projects on Behance <span class="arr">→</span></a
+        >
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="thumb">
+            <img
+              src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=1200&q=80"
+              alt="Lumē Deodorant packaging"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <div class="budget">Packaging · Branding</div>
+              <h3>Deodorant packaging concept for Lumē Deodorant</h3>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Packaging</span>
+              <span class="tag">Print</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="thumb">
+            <img
+              src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80"
+              alt="JRI Cards logo"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <div class="budget">Identity · Logo</div>
+              <h3>Logo for JRI Cards</h3>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Logo</span>
+              <span class="tag">Brand System</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="thumb">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+              alt="Wellness Web Media"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <div class="budget">Identity · Digital</div>
+              <h3>Logo for Wellness Web Media</h3>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Logo</span>
+              <span class="tag">Digital</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="thumb">
+            <img
+              src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1400&q=80"
+              alt="Dr. Oleg Kucheryavenko illustrations"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <div class="budget">Illustration · Editorial</div>
+              <h3>Illustrations for the website of Dr. Oleg Kucheryavenko</h3>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Illustration</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="thumb">
+            <img
+              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=1600&q=80"
+              alt="Web Friendly brand guide"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <div class="budget">Brand Guide · Logo</div>
+              <h3>Logo &amp; Brand Guide for Web Friendly</h3>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Guidelines</span>
+              <span class="tag">Identity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-footer reveal">
+        <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="text-link"
+          >See full Behance portfolio <span class="arr">→</span></a
+        >
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="section-head reveal">
+        <span class="eyebrow">Approach</span>
+      </div>
+      <p class="approach-intro reveal">
+        The visible request is rarely the full problem. The work starts by identifying what
+        actually needs to change.
+      </p>
+      <div class="services-list reveal">
+        <div class="service-row">
+          <div class="service-name">Direct Access</div>
+          <div class="service-desc">
+            You work directly with the person shaping the solution.
+          </div>
+          <div class="service-num">01</div>
+        </div>
+        <div class="service-row">
+          <div class="service-name">Problem-First Thinking</div>
+          <div class="service-desc">
+            The initial request often points to a deeper issue in perception, structure, or
+            positioning.
+          </div>
+          <div class="service-num">02</div>
+        </div>
+        <div class="service-row">
+          <div class="service-name">Flexible Structure</div>
+          <div class="service-desc">
+            Projects stay lean. Additional collaborators join only when the scope calls for them.
+          </div>
+          <div class="service-num">03</div>
+        </div>
+        <div class="service-row">
+          <div class="service-name">Strategic Clarity</div>
+          <div class="service-desc">
+            Visual decisions are treated as business decisions, not decoration.
+          </div>
+          <div class="service-num">04</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <h2>About</h2>
+          <p>
+            ezbaz is an independent creative practice based in Washington, DC. It works with
+            brands that need clarity, stronger perception, and more precise visual decisions.
+          </p>
+          <p>
+            Depending on the scope, ezbaz works independently or brings in trusted creative
+            partners to solve specific parts of a larger problem. The structure stays focused,
+            direct, and tailored to the task.
+          </p>
+          <br />
+          <a href="#contact" class="text-link">Start a conversation <span class="arr">→</span></a>
+        </div>
+        <div class="about-meta reveal">
+          <div class="meta-row">
+            <span class="meta-key">Location</span>
+            <span class="meta-val">Washington, DC, USA</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Focus</span>
+            <span class="meta-val">Identity · Packaging · Visual Systems</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Structure</span>
+            <span class="meta-val">Independent practice with trusted collaborators</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Website</span>
+            <span class="meta-val"><a href="https://ezbaz.com">ezbaz.com</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-item">
+          <div class="link-platform">Website</div>
+          <div class="link-title">ezbaz.com</div>
+          <div class="link-desc">Portfolio overview and the main place to learn more about the work.</div>
+          <a href="https://ezbaz.com" target="_blank" rel="noreferrer" class="link-go"
+            >Visit <span>→</span></a
+          >
+        </div>
+        <div class="contact-item">
+          <div class="link-platform">Email</div>
+          <div class="link-title">hello@ezbaz.com</div>
+          <div class="link-desc">For project inquiries, introductions, and direct outreach.</div>
+          <a href="mailto:hello@ezbaz.com" class="link-go">Email <span>→</span></a>
+        </div>
+        <div class="contact-item">
+          <div class="link-platform">Behance</div>
+          <div class="link-title">Selected cases</div>
+          <div class="link-desc">Browse the wider archive of identity, packaging, and illustration work.</div>
+          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="link-go"
+            >Open <span>→</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div>
+        <h4>Location</h4>
+        <address>
+          Ezra Bazilevsky / ezbaz<br />
+          Washington, DC, USA<br /><br />
+          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a><br />
+          <a href="mailto:hello@ezbaz.com">hello@ezbaz.com</a>
+        </address>
+      </div>
+      <div>
+        <h4>Selected Channels</h4>
+        <address>
+          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a><br />
+          <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer">LinkedIn</a><br />
+          <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Contact page</a>
+        </address>
+      </div>
+      <div>
+        <h4>Footer</h4>
+        <div class="footer-social">
+          <a href="#work">Work</a>
+          <a href="#approach">Approach</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ezra Bazilevsky. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a>
+          <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Contact</a>
+          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const cursor = document.getElementById("cursor");
+      document.addEventListener("mousemove", (event) => {
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+      });
+      document.querySelectorAll("a, button, .project-card, .service-row, .contact-item").forEach((element) => {
+        element.addEventListener("mouseenter", () => cursor.classList.add("expand"));
+        element.addEventListener("mouseleave", () => cursor.classList.remove("expand"));
+      });
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), index * 70);
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      document.querySelectorAll(".reveal").forEach((element) => io.observe(element));
+
+      function toggleMobile() {
+        document.getElementById("mobileNav").classList.toggle("open");
+      }
+      function closeMobile() {
+        document.getElementById("mobileNav").classList.remove("open");
+      }
+
+      const nav = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        nav.style.background = window.scrollY > 60 ? "rgba(11,11,9,0.92)" : "transparent";
+        nav.style.backdropFilter = window.scrollY > 60 ? "blur(12px)" : "none";
+        nav.style.transition = "background 0.4s, backdrop-filter 0.4s, padding 0.4s";
+        nav.style.padding = window.scrollY > 60 ? "18px 52px" : "32px 52px";
+      });
+    </script>
+  </body>
+</html>
