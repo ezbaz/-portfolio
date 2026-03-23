@@ -245,66 +245,24 @@
       <div class="section-head reveal">
         <span class="eyebrow">Contact</span>
       </div>
-      <div class="contact-grid reveal">
-        <div class="contact-item">
-          <div class="link-platform">Website</div>
-          <div class="link-title">ezbaz.com</div>
-          <div class="link-desc">Portfolio overview and the main place to learn more about the work.</div>
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer" class="link-go"
-            >Visit <span>→</span></a
-          >
-        </div>
-        <div class="contact-item">
-          <div class="link-platform">Email</div>
-          <div class="link-title">hello@ezbaz.com</div>
-          <div class="link-desc">For project inquiries, introductions, and direct outreach.</div>
-          <a href="mailto:hello@ezbaz.com" class="link-go">Email <span>→</span></a>
-        </div>
-        <div class="contact-item">
-          <div class="link-platform">Behance</div>
-          <div class="link-title">Selected cases</div>
-          <div class="link-desc">Browse the wider archive of identity, packaging, and illustration work.</div>
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer" class="link-go"
-            >Open <span>→</span></a
-          >
-        </div>
+      <div class="contact-panel reveal">
+        <p class="contact-copy">
+          If you are dealing with a branding, packaging, campaign, or communication problem that
+          feels larger than a design task, let’s talk.
+        </p>
+        <a href="mailto:hello@ezbaz.com" class="text-link contact-cta">Start a Conversation <span class="arr">→</span></a>
       </div>
     </section>
 
     <footer id="footer">
-      <div>
-        <h4>Location</h4>
-        <address>
-          Ezra Bazilevsky / ezbaz<br />
-          Washington, DC, USA<br /><br />
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a><br />
-          <a href="mailto:hello@ezbaz.com">hello@ezbaz.com</a>
-        </address>
+      <div class="footer-links-only">
+        <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a>
+        <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="mailto:hello@ezbaz.com">Email</a>
       </div>
-      <div>
-        <h4>Selected Channels</h4>
-        <address>
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a><br />
-          <a href="https://www.linkedin.com/in/ezrabazilevsky/" target="_blank" rel="noreferrer">LinkedIn</a><br />
-          <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Contact page</a>
-        </address>
-      </div>
-      <div>
-        <h4>Footer</h4>
-        <div class="footer-social">
-          <a href="#work">Work</a>
-          <a href="#approach">Approach</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Ezra Bazilevsky. All rights reserved.</span>
-        <div class="footer-bottom-links">
-          <a href="https://ezbaz.com" target="_blank" rel="noreferrer">ezbaz.com</a>
-          <a href="https://ezbaz.com/contact" target="_blank" rel="noreferrer">Contact</a>
-          <a href="https://www.behance.net/ezbaz" target="_blank" rel="noreferrer">Behance</a>
-        </div>
+      <div class="footer-bottom footer-bottom--single">
+        <span>© 2026 ezbaz. All rights reserved.</span>
       </div>
     </footer>
 
@@ -314,7 +272,7 @@
         cursor.style.left = `${event.clientX}px`;
         cursor.style.top = `${event.clientY}px`;
       });
-      document.querySelectorAll("a, button, .project-card, .service-row, .contact-item").forEach((element) => {
+      document.querySelectorAll("a, button, .project-card, .service-row, .contact-panel").forEach((element) => {
         element.addEventListener("mouseenter", () => cursor.classList.add("expand"));
         element.addEventListener("mouseleave", () => cursor.classList.remove("expand"));
       });
