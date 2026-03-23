@@ -467,6 +467,14 @@ section {
   flex-direction: column;
 }
 
+.approach-intro {
+  max-width: 44rem;
+  margin-bottom: 34px;
+  color: rgba(244, 241, 234, 0.78);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 .service-row {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
