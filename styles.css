@@ -196,7 +196,7 @@ nav {
   background-image: url("ip-ezbaz_hero.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.34;
   transition: opacity 2s var(--ease);
 }
 
@@ -204,7 +204,7 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--black) 30%, transparent 70%);
+  background: linear-gradient(to top, rgba(11, 11, 9, 0.78) 22%, rgba(11, 11, 9, 0.16) 72%);
 }
 
 .hero-sub {
