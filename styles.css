@@ -78,6 +78,7 @@ main {
   border-bottom: 1px solid var(--line);
   background-image:
     linear-gradient(180deg, rgba(9, 35, 45, 0.35) 0%, rgba(2, 15, 22, 0.86) 74%, #011821 100%),
+    url("ezbg0toprt.jpg"),
     url("ip-ezbaz_hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
