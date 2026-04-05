@@ -128,6 +128,11 @@ a {
   margin-bottom: 22px;
 }
 
+.hero h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
 .hero p {
   max-width: 500px;
   font-size: clamp(18px, 1.35vw, 28px);
