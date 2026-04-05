@@ -18,7 +18,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   line-height: 1.45;
-  padding-bottom: 120px;
+  padding-bottom: 88px;
 }
 
 a {
@@ -26,100 +26,64 @@ a {
   text-decoration: none;
 }
 
-.top-nav {
-  position: absolute;
-  top: 0;
+.bottom-dock {
+  position: fixed;
   left: 0;
   right: 0;
-  z-index: 20;
+  bottom: 0;
+  z-index: 50;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px 8.5vw;
+  height: 64px;
+  padding: 0 clamp(24px, 8vw, 220px);
+  border-top: 1px solid rgba(179, 219, 232, 0.35);
+  background: rgba(10, 26, 33, 0.45);
+  backdrop-filter: blur(10px) saturate(120%);
 }
 
-.bottom-nav {
-  position: fixed;
-  left: 50%;
-  bottom: 26px;
-  transform: translateX(-50%);
-  z-index: 40;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(218, 241, 255, 0.36);
-  background:
-    linear-gradient(
-      135deg,
-      rgba(234, 250, 255, 0.3) 0%,
-      rgba(154, 207, 230, 0.16) 45%,
-      rgba(89, 168, 199, 0.15) 100%
-    );
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.34),
-    inset 0 -1px 0 rgba(190, 230, 245, 0.25);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-}
-
-.bottom-nav a {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.9;
-  white-space: nowrap;
-  border-radius: 999px;
-  padding: 9px 16px;
-  color: rgba(236, 246, 251, 0.96);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-  transition:
-    background 0.25s ease,
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.bottom-nav a:hover {
-  opacity: 1;
-  background: rgba(219, 244, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-.brand {
+.dock-brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 41px;
-  line-height: 0.8;
+  font-size: 58px;
+  line-height: 0.7;
 }
 
-.brand span {
+.dock-brand span {
   font-family: "Manrope", sans-serif;
-  font-size: 8px;
-  text-transform: lowercase;
+  font-size: 10px;
   margin-left: 8px;
+  letter-spacing: 0.03em;
+}
+
+.dock-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.dock-nav a {
+  font-size: 12px;
+  text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.86;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.dock-nav a:hover {
+  opacity: 1;
+}
+
+.dock-chip {
+  border: 1px solid rgba(210, 234, 243, 0.6);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1;
 }
 
 .top-stage {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background-image: url("ezbg0toprt.jpg"), url("ip-ezbaz_hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
   position: relative;
-}
-
-.top-stage::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 900px;
-  background: linear-gradient(180deg, rgba(9, 35, 45, 0.24) 0%, rgba(2, 15, 22, 0.15) 60%, rgba(1, 24, 33, 0) 100%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .hero,
@@ -128,17 +92,25 @@ a {
   padding-left: clamp(48px, 8vw, 220px);
   padding-right: clamp(48px, 8vw, 220px);
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .hero {
-  min-height: 880px;
-  padding-top: 210px;
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(90deg, rgba(5, 30, 42, 0.8) 0%, rgba(7, 40, 52, 0.45) 35%, rgba(2, 16, 23, 0.15) 100%),
+    url("ezbg0toprt.jpg"),
+    url("ip-ezbaz_hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 .hero-copy {
   width: min(560px, 95%);
+  margin-top: 40px;
 }
 
 .hero h1,
@@ -151,14 +123,14 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(50px, 5.4vw, 78px);
-  line-height: 0.92;
+  font-size: clamp(56px, 4.8vw, 94px);
+  line-height: 0.9;
   margin-bottom: 22px;
 }
 
 .hero p {
   max-width: 500px;
-  font-size: 12px;
+  font-size: clamp(18px, 1.35vw, 28px);
   color: var(--muted);
 }
 
@@ -166,30 +138,26 @@ a {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 72px;
-  padding-top: 66px;
-  padding-bottom: 82px;
-  position: relative;
-}
-
-.story::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -24px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(185, 242, 255, 0.8), transparent);
+  min-height: 100vh;
+  align-items: center;
+  background-image:
+    linear-gradient(180deg, rgba(3, 25, 34, 0.16) 0%, rgba(1, 19, 29, 0.74) 100%),
+    url("ezbg0toprt.jpg"),
+    url("ip-ezbaz_hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 70%;
 }
 
 .story h2,
 .work h2 {
-  font-size: clamp(42px, 4.1vw, 60px);
+  font-size: clamp(58px, 4.4vw, 88px);
   margin-bottom: 20px;
 }
 
 .story-left p {
   max-width: 580px;
-  font-size: 12px;
+  font-size: clamp(16px, 1.2vw, 25px);
   margin-bottom: 12px;
   color: var(--muted);
 }
@@ -202,14 +170,14 @@ a {
 }
 
 .trait h3 {
-  font-size: 26px;
+  font-size: clamp(36px, 2.5vw, 56px);
   font-weight: 300;
   margin-bottom: 2px;
   font-family: "Cormorant Garamond", serif;
 }
 
 .trait p {
-  font-size: 12px;
+  font-size: clamp(16px, 1.15vw, 24px);
   color: var(--muted);
 }
 
@@ -291,28 +259,39 @@ footer {
 }
 
 @media (max-width: 980px) {
-  .top-nav {
-    padding: 14px 5vw;
+  .bottom-dock {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand chip"
+      "nav nav";
+    gap: 6px 14px;
+    height: auto;
+    padding: 10px 5vw;
   }
 
-  .bottom-nav {
-    width: min(94vw, 560px);
-    justify-content: space-between;
-    bottom: 16px;
-    gap: 4px;
-    padding: 6px;
+  .dock-brand {
+    grid-area: brand;
+    font-size: 44px;
   }
 
-  .bottom-nav a {
-    flex: 1 1 auto;
-    text-align: center;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    padding: 9px 6px;
+  .dock-brand span {
+    font-size: 8px;
   }
 
-  .brand {
-    font-size: 34px;
+  .dock-nav {
+    grid-area: nav;
+    gap: 12px;
+  }
+
+  .dock-nav a {
+    font-size: 10px;
+  }
+
+  .dock-chip {
+    grid-area: chip;
+    font-size: 17px;
+    padding: 6px 12px;
   }
 
   .hero,
@@ -325,14 +304,33 @@ footer {
   }
 
   .hero {
-    min-height: 720px;
-    padding-top: 180px;
+    min-height: 100vh;
   }
 
   .story {
     grid-template-columns: 1fr;
-    gap: 32px;
-    padding-top: 40px;
+    gap: 28px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 10vw, 64px);
+  }
+
+  .hero p,
+  .story-left p,
+  .trait p {
+    font-size: 18px;
+  }
+
+  .story h2,
+  .work h2 {
+    font-size: clamp(44px, 10vw, 62px);
+  }
+
+  .trait h3 {
+    font-size: clamp(28px, 6vw, 40px);
   }
 
   .work-grid {
