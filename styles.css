@@ -84,7 +84,7 @@ a {
 
 .top-stage {
   position: relative;
-  background-image: url("ezbg0toprt.jpg"), url("ip-ezbaz_hero.jpg");
+  background-image: url("ezbg0toprt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
