@@ -218,7 +218,7 @@ a {
 
 .work .lead {
   max-width: 430px;
-  font-size: 12px;
+  font-size: clamp(16px, 1.2vw, 25px);
   color: var(--muted);
   margin-bottom: 56px;
 }
