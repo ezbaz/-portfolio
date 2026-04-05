@@ -111,9 +111,56 @@
           </article>
         </div>
       </section>
+
+      <section class="contact-section reveal" id="contact">
+        <h2>Collaboration Inquiry</h2>
+        <p class="contact-lead">
+          Tell us about your project or service request. We usually respond within 1–2 business days.
+        </p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-grid">
+            <label>
+              Your Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+          </div>
+
+          <label>
+            Inquiry Type
+            <select name="inquiry_type" required>
+              <option value="">Select one</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="service-request">Service Request</option>
+            </select>
+          </label>
+
+          <label>
+            Project Details
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <label class="honeypot" aria-hidden="true">
+            Leave this field empty
+            <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <label>
+            Anti-spam check: what is <span id="spamQuestion">3 + 4</span>?
+            <input type="number" name="spam_answer" id="spamAnswer" required />
+          </label>
+
+          <button type="submit" class="send-btn">Send Inquiry</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
 
-    <footer id="contact">
+    <footer id="footer">
       <p>© 2026 ezbaz</p>
     </footer>
 
@@ -132,6 +179,15 @@
 
     <script>
       const revealElements = document.querySelectorAll(".reveal");
+      const spamQuestion = document.getElementById("spamQuestion");
+      const spamAnswerInput = document.getElementById("spamAnswer");
+      const form = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+
+      const antiSpamA = Math.floor(Math.random() * 6) + 2;
+      const antiSpamB = Math.floor(Math.random() * 7) + 1;
+      const antiSpamResult = antiSpamA + antiSpamB;
+      spamQuestion.textContent = `${antiSpamA} + ${antiSpamB}`;
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -151,6 +207,32 @@
       revealElements.forEach((item, index) => {
         item.style.setProperty("--reveal-delay", `${index * 80}ms`);
         observer.observe(item);
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const honeypot = form.querySelector('input[name="company_website"]').value.trim();
+        const spamAnswer = Number(spamAnswerInput.value);
+
+        if (honeypot !== "") {
+          formStatus.textContent = "Submission blocked by anti-spam filter.";
+          return;
+        }
+
+        if (spamAnswer !== antiSpamResult) {
+          formStatus.textContent = "Please solve the anti-spam question correctly.";
+          return;
+        }
+
+        if (!form.checkValidity()) {
+          formStatus.textContent = "Please complete all required fields.";
+          return;
+        }
+
+        formStatus.textContent = "Thanks! Your inquiry is ready to be sent.";
+        form.reset();
+        spamAnswerInput.value = "";
       });
     </script>
   </body>

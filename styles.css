@@ -229,6 +229,95 @@ a {
   gap: 24px;
 }
 
+.contact-section {
+  width: 100%;
+  padding: 40px clamp(48px, 8vw, 220px) 120px;
+}
+
+.contact-section h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(44px, 3.8vw, 72px);
+  margin-bottom: 12px;
+}
+
+.contact-lead {
+  max-width: 720px;
+  font-size: clamp(16px, 1.1vw, 22px);
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.contact-form {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(227, 239, 245, 0.88);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(181, 219, 232, 0.28);
+  background: rgba(2, 22, 30, 0.45);
+  color: var(--text);
+  padding: 12px 14px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(185, 242, 255, 0.8);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.send-btn {
+  width: fit-content;
+  border: 1px solid rgba(185, 242, 255, 0.8);
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.form-status {
+  min-height: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
 .tile {
   display: flex;
   flex-direction: column;
@@ -319,6 +408,7 @@ footer {
   .hero,
   .story,
   .work,
+  .contact-section,
   footer {
     width: 100%;
     padding-left: 5vw;
@@ -360,6 +450,10 @@ footer {
     gap: 40px;
   }
 
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .tile,
   .tile-small,
   .tile-medium,
@@ -373,6 +467,7 @@ footer {
   .tile p {
     font-size: 26px;
   }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
