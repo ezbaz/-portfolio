@@ -70,19 +70,30 @@ a {
 .top-stage {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background-image:
-    linear-gradient(180deg, rgba(9, 35, 45, 0.18) 0%, rgba(2, 15, 22, 0.64) 68%, rgba(1, 24, 33, 0.9) 100%),
-    url("ezbg0toprt.jpg"),
-    url("ip-ezbaz_hero.jpg");
+  background-image: url("ezbg0toprt.jpg"), url("ip-ezbaz_hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  position: relative;
+}
+
+.top-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 900px;
+  background: linear-gradient(180deg, rgba(9, 35, 45, 0.24) 0%, rgba(2, 15, 22, 0.15) 60%, rgba(1, 24, 33, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero,
 .story {
-  width: min(1200px, 83vw);
-  margin: 0 auto;
+  width: 100%;
+  padding-left: clamp(48px, 8vw, 220px);
+  padding-right: clamp(48px, 8vw, 220px);
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -120,7 +131,8 @@ a {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 72px;
-  padding: 66px 0 82px;
+  padding-top: 66px;
+  padding-bottom: 82px;
   position: relative;
 }
 
@@ -167,9 +179,11 @@ a {
 }
 
 .work {
-  width: min(1200px, 83vw);
-  margin: 0 auto;
-  padding: 90px 0 110px;
+  width: 100%;
+  padding-left: clamp(48px, 8vw, 220px);
+  padding-right: clamp(48px, 8vw, 220px);
+  padding-top: 90px;
+  padding-bottom: 110px;
 }
 
 .work .lead {
@@ -233,7 +247,9 @@ a {
 }
 
 footer {
-  width: min(1200px, 83vw);
+  width: 100%;
+  padding-left: clamp(48px, 8vw, 220px);
+  padding-right: clamp(48px, 8vw, 220px);
   margin: 40px auto 70px;
   font-size: 12px;
   color: rgba(227, 239, 245, 0.55);
@@ -256,7 +272,9 @@ footer {
   .story,
   .work,
   footer {
-    width: 90vw;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   .hero {
