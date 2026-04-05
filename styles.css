@@ -65,16 +65,15 @@ a {
 }
 
 .dock-brand {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 58px;
-  line-height: 0.7;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.dock-brand span {
-  font-family: "Manrope", sans-serif;
-  font-size: 10px;
-  margin-left: 8px;
-  letter-spacing: 0.03em;
+.dock-logo {
+  display: block;
+  width: clamp(140px, 10vw, 210px);
+  height: auto;
 }
 
 .dock-nav {
@@ -300,11 +299,6 @@ footer {
 
   .dock-brand {
     grid-area: brand;
-    font-size: 44px;
-  }
-
-  .dock-brand span {
-    font-size: 8px;
   }
 
   .dock-nav {
