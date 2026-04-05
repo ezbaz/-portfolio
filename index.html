@@ -20,7 +20,7 @@
     <main>
       <section class="top-stage">
         <section class="hero" aria-label="Hero">
-          <div class="hero-copy">
+          <div class="hero-copy reveal">
             <h1>
               <span>Creative partner for work</span>
               <span>that takes shape from within.</span>
@@ -33,7 +33,7 @@
         </section>
 
         <section class="story" id="story">
-          <div class="story-left">
+          <div class="story-left reveal">
             <h2>What shapes the work</h2>
             <p>
               A brief matters, but it is rarely the whole story.
@@ -46,15 +46,15 @@
           </div>
 
           <div class="story-right">
-            <div class="trait">
+            <div class="trait reveal">
               <h3>Character</h3>
               <p>What gives the work its own pulse.</p>
             </div>
-            <div class="trait">
+            <div class="trait reveal">
               <h3>Structure</h3>
               <p>What holds it together.</p>
             </div>
-            <div class="trait">
+            <div class="trait reveal">
               <h3>Form</h3>
               <p>What makes the work feel inevitable.</p>
             </div>
@@ -62,7 +62,7 @@
         </section>
       </section>
 
-      <section class="work" id="work">
+      <section class="work reveal" id="work">
         <h2>Selected Work</h2>
         <p class="lead">
           Work where the thinking had to become real — across branding, packaging,
@@ -127,5 +127,29 @@
       </nav>
       <span class="dock-chip">Honest Voice</span>
     </div>
+
+    <script>
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+          rootMargin: "0px 0px -8% 0px",
+        }
+      );
+
+      revealElements.forEach((item, index) => {
+        item.style.setProperty("--reveal-delay", `${index * 80}ms`);
+        observer.observe(item);
+      });
+    </script>
   </body>
 </html>
