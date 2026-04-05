@@ -87,7 +87,7 @@ a {
   background-image: url("ezbg0toprt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: right top;
 }
 
 .top-stage::before {
