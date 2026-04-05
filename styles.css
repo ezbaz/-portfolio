@@ -375,7 +375,6 @@ footer {
   .tile p {
     font-size: 26px;
   }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {
