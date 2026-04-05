@@ -84,6 +84,18 @@ a {
 
 .top-stage {
   position: relative;
+  background-image: url("ezbg0toprt.jpg"), url("ip-ezbaz_hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.top-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 28, 39, 0.34) 0%, rgba(3, 24, 34, 0.2) 45%, rgba(1, 19, 29, 0.52) 100%);
+  pointer-events: none;
 }
 
 .hero,
@@ -92,20 +104,15 @@ a {
   padding-left: clamp(48px, 8vw, 220px);
   padding-right: clamp(48px, 8vw, 220px);
   position: relative;
+  z-index: 1;
   overflow: hidden;
+  background: transparent;
 }
 
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image:
-    linear-gradient(90deg, rgba(5, 30, 42, 0.8) 0%, rgba(7, 40, 52, 0.45) 35%, rgba(2, 16, 23, 0.15) 100%),
-    url("ezbg0toprt.jpg"),
-    url("ip-ezbaz_hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
 }
 
 .hero-copy {
@@ -145,13 +152,6 @@ a {
   gap: 72px;
   min-height: 100vh;
   align-items: center;
-  background-image:
-    linear-gradient(180deg, rgba(3, 25, 34, 0.16) 0%, rgba(1, 19, 29, 0.74) 100%),
-    url("ezbg0toprt.jpg"),
-    url("ip-ezbaz_hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 70%;
 }
 
 .story h2,
