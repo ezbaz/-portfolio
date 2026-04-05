@@ -18,6 +18,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   line-height: 1.45;
+  padding-bottom: 120px;
 }
 
 a {
@@ -26,30 +27,64 @@ a {
 }
 
 .top-nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 8.5vw;
-  border-bottom: 1px solid rgba(181, 219, 232, 0.24);
-  background: rgba(2, 23, 31, 0.32);
-  backdrop-filter: blur(2px);
 }
 
-.top-nav nav {
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  z-index: 40;
   display: flex;
-  gap: 18px;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(218, 241, 255, 0.36);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(234, 250, 255, 0.3) 0%,
+      rgba(154, 207, 230, 0.16) 45%,
+      rgba(89, 168, 199, 0.15) 100%
+    );
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(190, 230, 245, 0.25);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
 }
 
-.top-nav nav a {
-  font-size: 8px;
+.bottom-nav a {
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  opacity: 0.86;
+  letter-spacing: 0.12em;
+  opacity: 0.9;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 9px 16px;
+  color: rgba(236, 246, 251, 0.96);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  transition:
+    background 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.bottom-nav a:hover {
+  opacity: 1;
+  background: rgba(219, 244, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .brand {
@@ -260,8 +295,20 @@ footer {
     padding: 14px 5vw;
   }
 
-  .top-nav nav {
-    gap: 12px;
+  .bottom-nav {
+    width: min(94vw, 560px);
+    justify-content: space-between;
+    bottom: 16px;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .bottom-nav a {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 9px 6px;
   }
 
   .brand {
