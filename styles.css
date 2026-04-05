@@ -72,8 +72,8 @@ a {
 
 .dock-logo {
   display: block;
-  width: clamp(140px, 10vw, 210px);
-  height: auto;
+  height: clamp(20px, 2.1vh, 28px);
+  width: auto;
 }
 
 .dock-nav {
