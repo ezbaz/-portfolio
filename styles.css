@@ -324,6 +324,11 @@ a {
   gap: 10px;
 }
 
+.tile > a {
+  display: block;
+  color: inherit;
+}
+
 .tile img {
   width: 100%;
   display: block;
@@ -374,6 +379,48 @@ footer {
   color: rgba(227, 239, 245, 0.55);
 }
 
+.case-page {
+  min-height: 100vh;
+  background: var(--dark);
+}
+
+.case-hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 clamp(48px, 8vw, 220px) 84px;
+  background-image:
+    linear-gradient(180deg, rgba(4, 24, 33, 0.26) 0%, rgba(1, 18, 27, 0.72) 100%),
+    url("luminarium_hero_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.case-hero-inner h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(56px, 5vw, 92px);
+  margin-bottom: 12px;
+}
+
+.case-hero-inner p {
+  font-size: clamp(22px, 1.6vw, 34px);
+  color: var(--muted);
+}
+
+.case-paragraph {
+  padding: 72px clamp(48px, 8vw, 220px) 120px;
+}
+
+.case-paragraph p {
+  max-width: 860px;
+  font-size: clamp(18px, 1.2vw, 25px);
+  line-height: 1.7;
+  color: var(--muted);
+}
+
 @media (max-width: 980px) {
   .bottom-dock {
     display: grid;
@@ -409,6 +456,8 @@ footer {
   .story,
   .work,
   .contact-section,
+  .case-hero,
+  .case-paragraph,
   footer {
     width: 100%;
     padding-left: 5vw;
@@ -467,7 +516,6 @@ footer {
   .tile p {
     font-size: 26px;
   }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {
