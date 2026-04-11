@@ -419,14 +419,18 @@ footer {
 }
 
 .case-paragraph p {
-  max-width: 860px;
+  max-width: 720px;
   font-size: clamp(18px, 1.2vw, 25px);
   line-height: 1.7;
   color: var(--muted);
 }
 
+.editorial-blocks {
+  max-width: 760px;
+}
+
 .editorial-blocks p + p {
-  margin-top: 68px;
+  margin-top: 88px;
 }
 
 @media (max-width: 980px) {
@@ -524,6 +528,7 @@ footer {
   .tile p {
     font-size: 26px;
   }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
