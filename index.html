@@ -206,9 +206,28 @@
         }
       );
 
+      const earlyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              earlyObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.01,
+          rootMargin: "0px 0px 25% 0px",
+        }
+      );
+
       revealElements.forEach((item, index) => {
         item.style.setProperty("--reveal-delay", `${index * 80}ms`);
-        observer.observe(item);
+        if (item.id === "work") {
+          earlyObserver.observe(item);
+        } else {
+          observer.observe(item);
+        }
       });
 
       form.addEventListener("submit", (event) => {
