@@ -419,7 +419,7 @@ footer {
 }
 
 .case-paragraph {
-  padding: 40px clamp(48px, 8vw, 220px) 120px;
+  padding: 0;
 }
 
 .case-paragraph p {
@@ -438,9 +438,9 @@ footer {
 }
 
 .case-gallery {
-  padding: 0 clamp(48px, 8vw, 220px) 140px;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   align-items: start;
 }
@@ -459,8 +459,20 @@ footer {
   aspect-ratio: 16 / 10;
 }
 
+.case-gallery-main {
+  grid-column: 1 / -1;
+}
+
 .case-gallery-item img {
   aspect-ratio: 4 / 3;
+}
+
+.case-story {
+  padding: 56px clamp(48px, 8vw, 220px) 140px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: start;
 }
 
 @media (max-width: 980px) {
@@ -498,8 +510,7 @@ footer {
   .story,
   .work,
   .contact-section,
-  .case-paragraph,
-  .case-gallery,
+  .case-story,
   footer {
     width: 100%;
     padding-left: 5vw;
@@ -561,6 +572,12 @@ footer {
     padding-bottom: 120px;
   }
 
+  .case-story {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-bottom: 120px;
+  }
+
   .tile,
   .tile-small,
   .tile-medium,
@@ -570,7 +587,6 @@ footer {
     grid-column: auto;
     margin-top: 0;
   }
-}
 
   .tile p {
     font-size: 26px;
