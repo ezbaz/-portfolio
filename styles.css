@@ -565,7 +565,6 @@ footer {
     gap: 18px;
     padding-bottom: 120px;
   }
-
   .tile,
   .tile-small,
   .tile-medium,
@@ -575,6 +574,7 @@ footer {
     grid-column: auto;
     margin-top: 0;
   }
+}
 
   .tile p {
     font-size: 26px;
