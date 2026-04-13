@@ -453,7 +453,6 @@ footer {
   width: 100%;
   display: block;
   object-fit: cover;
-  border: 1px solid rgba(181, 219, 232, 0.2);
 }
 
 .case-gallery-main img {
