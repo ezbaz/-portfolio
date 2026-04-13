@@ -416,6 +416,7 @@ footer {
 
 .case-hero-inner {
   max-width: 820px;
+  transform: translateY(-200px);
 }
 
 .case-paragraph {
@@ -542,6 +543,7 @@ footer {
 
   .case-hero-inner {
     max-width: 90vw;
+    transform: translateY(0);
   }
 
   .hero p,
