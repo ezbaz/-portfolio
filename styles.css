@@ -385,7 +385,7 @@ footer {
 }
 
 .case-hero {
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 clamp(48px, 8vw, 220px);
@@ -533,9 +533,9 @@ footer {
   }
 
   .case-hero {
-    min-height: 86vh;
+    min-height: 92vh;
     padding: 0 5vw;
-    background-position: 62% top;
+    background-position: center top;
   }
 
   .case-hero-inner {
