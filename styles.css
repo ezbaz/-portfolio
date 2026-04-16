@@ -395,6 +395,10 @@ footer {
   background-position: center top;
 }
 
+.case-hero--beritech {
+  background-image: url("beritech_hero.jpg");
+}
+
 .case-hero-inner h1 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
