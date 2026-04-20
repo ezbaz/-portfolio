@@ -399,6 +399,10 @@ footer {
   background-image: url("beritech/beritech_hero.jpg");
 }
 
+.case-hero--jricards {
+  background-image: url("jricards/jricardshero.jpg");
+}
+
 .case-hero-inner h1 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
