@@ -463,6 +463,11 @@ footer {
   aspect-ratio: 16 / 10;
 }
 
+.case-gallery-3 img.case-image-full {
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
 .case-story {
   padding: 56px clamp(48px, 8vw, 220px) 140px;
   display: grid;
