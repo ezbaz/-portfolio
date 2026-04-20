@@ -464,8 +464,11 @@ footer {
 }
 
 .case-gallery-3 img.case-image-full {
+  width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
-  aspect-ratio: auto;
+  aspect-ratio: auto !important;
 }
 
 .case-story {
