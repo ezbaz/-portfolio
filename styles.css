@@ -403,6 +403,10 @@ footer {
   background-image: url("jricards/jricardshero.jpg");
 }
 
+.case-hero--castrofitness {
+  background-image: url("castrofitness/castrofitnesshero.webp");
+}
+
 .case-hero-inner h1 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
@@ -604,6 +608,7 @@ footer {
   .tile p {
     font-size: 26px;
   }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
