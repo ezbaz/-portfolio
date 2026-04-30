@@ -143,7 +143,14 @@
           Tell me where the work begins: a new identity, a visual system, packaging, campaign material, or a brand that no longer feels quite like itself. I read each message carefully and reply as soon as I can.
         </p>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="mailto:ezbaz.com@gmail.com"
+          method="post"
+          enctype="text/plain"
+          novalidate
+        >
           <div class="form-grid">
             <label>
               Your Name
@@ -274,9 +281,8 @@
           return;
         }
 
-        formStatus.textContent = "Thanks! Your inquiry is ready to be sent.";
-        form.reset();
-        spamAnswerInput.value = "";
+        formStatus.textContent = "Thanks! Opening your email client to send the inquiry.";
+        form.submit();
       });
     </script>
   </body>
