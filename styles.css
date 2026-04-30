@@ -458,6 +458,23 @@ footer {
   margin-bottom: 20px;
 }
 
+.testfirstpost-page .case-paragraph h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  font-size: clamp(58px, 4.4vw, 88px);
+  margin-bottom: 18px;
+}
+
+.testfirstpost-page .post-subtitle {
+  max-width: 780px;
+  font-size: clamp(18px, 1.15vw, 24px);
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 38px;
+}
+
 .case-hero-inner p {
   font-size: clamp(22px, 1.6vw, 34px);
   color: var(--muted);
@@ -652,6 +669,7 @@ footer {
   .tile p {
     font-size: 26px;
   }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
