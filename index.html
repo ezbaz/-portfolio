@@ -146,9 +146,8 @@
         <form
           class="contact-form"
           id="contactForm"
-          action="mailto:ezbaz.com@gmail.com"
-          method="post"
-          enctype="text/plain"
+          action="https://api.web3forms.com/submit"
+          method="POST"
           novalidate
         >
           <div class="form-grid">
@@ -164,7 +163,7 @@
 
           <label>
             Inquiry Type
-            <select name="inquiry_type" required>
+            <select name="project_type">
               <option value="">Select one</option>
               <option value="collaboration">Collaboration</option>
               <option value="service-request">Service Request</option>
@@ -176,15 +175,15 @@
             <textarea name="message" rows="6" required></textarea>
           </label>
 
-          <label class="honeypot" aria-hidden="true">
-            Leave this field empty
-            <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+          <label>
+            Company (optional)
+            <input type="text" name="company" autocomplete="organization" />
           </label>
 
-          <label>
-            Anti-spam check: what is <span id="spamQuestion">3 + 4</span>?
-            <input type="number" name="spam_answer" id="spamAnswer" required />
-          </label>
+          <input type="hidden" name="access_key" value="cf5deaf5-ae73-4d60-a8d5-c3709d631d18" />
+          <input type="hidden" name="subject" value="New inquiry from ezbaz.com" />
+          <input type="hidden" name="from_name" value="ezbaz Creative Partner website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
 
           <button type="submit" class="send-btn">Send Inquiry</button>
           <p class="form-status" id="formStatus" aria-live="polite"></p>
@@ -211,15 +210,8 @@
 
     <script>
       const revealElements = document.querySelectorAll(".reveal");
-      const spamQuestion = document.getElementById("spamQuestion");
-      const spamAnswerInput = document.getElementById("spamAnswer");
-      const form = document.getElementById("contactForm");
+            const form = document.getElementById("contactForm");
       const formStatus = document.getElementById("formStatus");
-
-      const antiSpamA = Math.floor(Math.random() * 6) + 2;
-      const antiSpamB = Math.floor(Math.random() * 7) + 1;
-      const antiSpamResult = antiSpamA + antiSpamB;
-      spamQuestion.textContent = `${antiSpamA} + ${antiSpamB}`;
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -260,29 +252,31 @@
         }
       });
 
-      form.addEventListener("submit", (event) => {
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
-
-        const honeypot = form.querySelector('input[name="company_website"]').value.trim();
-        const spamAnswer = Number(spamAnswerInput.value);
-
-        if (honeypot !== "") {
-          formStatus.textContent = "Submission blocked by anti-spam filter.";
-          return;
-        }
-
-        if (spamAnswer !== antiSpamResult) {
-          formStatus.textContent = "Please solve the anti-spam question correctly.";
-          return;
-        }
 
         if (!form.checkValidity()) {
           formStatus.textContent = "Please complete all required fields.";
           return;
         }
 
-        formStatus.textContent = "Thanks! Opening your email client to send the inquiry.";
-        form.submit();
+        formStatus.textContent = "Sending...";
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+          });
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          formStatus.textContent = "Thank you — your message has been sent.";
+          form.reset();
+        } catch (error) {
+          formStatus.textContent = "Something went wrong. Please try again or email me directly.";
+        }
       });
     </script>
   </body>
