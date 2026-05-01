@@ -437,6 +437,24 @@ footer a:hover {
   max-width: 1200px;
 }
 
+
+.note-main {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.note-page .essay-content {
+  max-width: 900px;
+}
+
+.note-page .essay-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: rgba(227, 239, 245, 0.58);
+  margin-bottom: 22px;
+}
+
 .note-page h1 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
@@ -461,12 +479,12 @@ footer a:hover {
 }
 
 .note-page .essay-section {
-  padding-top: 64px;
+  padding-top: 78px;
 }
 
 .note-page .essay-cta {
-  padding-top: 88px;
-  padding-bottom: 120px;
+  padding-top: 104px;
+  padding-bottom: 140px;
 }
 
 .note-page .essay-cta a {
@@ -716,7 +734,6 @@ footer a:hover {
   .form-grid {
     grid-template-columns: 1fr;
   }
-}
 
   .case-story {
     grid-template-columns: 1fr;
