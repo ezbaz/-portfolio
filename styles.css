@@ -413,6 +413,74 @@ footer {
   color: rgba(227, 239, 245, 0.55);
 }
 
+
+footer a {
+  color: rgba(227, 239, 245, 0.72);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(227, 239, 245, 0.3);
+}
+
+footer a:hover {
+  border-bottom-color: rgba(227, 239, 245, 0.72);
+}
+
+.note-page .essay-hero,
+.note-page .essay-section,
+.note-page .essay-cta {
+  width: 100%;
+  padding-left: clamp(48px, 8vw, 220px);
+  padding-right: clamp(48px, 8vw, 220px);
+}
+
+.note-page .essay-hero {
+  padding-top: 120px;
+  max-width: 1200px;
+}
+
+.note-page h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(54px, 4.2vw, 84px);
+  margin-bottom: 24px;
+}
+
+.note-page h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(36px, 2.8vw, 54px);
+  margin-bottom: 20px;
+}
+
+.note-page p {
+  max-width: 860px;
+  color: var(--muted);
+  font-size: clamp(18px, 1.2vw, 24px);
+  line-height: 1.72;
+}
+
+.note-page .essay-section {
+  padding-top: 64px;
+}
+
+.note-page .essay-cta {
+  padding-top: 88px;
+  padding-bottom: 120px;
+}
+
+.note-page .essay-cta a {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(227, 239, 245, 0.5);
+}
+
+.note-page .essay-cta a:hover {
+  border-bottom-color: rgba(227, 239, 245, 0.9);
+}
+
 .case-page {
   min-height: 100vh;
   background: var(--dark);
@@ -588,6 +656,9 @@ footer {
   .scope-section,
   .contact-section,
   .case-story,
+  .note-page .essay-hero,
+  .note-page .essay-section,
+  .note-page .essay-cta,
   footer {
     width: 100%;
     padding-left: 5vw;
@@ -645,6 +716,7 @@ footer {
   .form-grid {
     grid-template-columns: 1fr;
   }
+}
 
   .case-story {
     grid-template-columns: 1fr;
