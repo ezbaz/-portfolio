@@ -566,6 +566,15 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
+
+.honestvoice-page .publication-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
 .honestvoice-page .publication-card h2 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
