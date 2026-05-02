@@ -693,6 +693,11 @@ footer a:hover {
 }
 
 @media (max-width: 980px) {
+  .top-stage {
+    background-image: url("hero-mobile.jpg");
+    background-position: center top;
+  }
+
   .bottom-dock {
     display: grid;
     grid-template-columns: 1fr auto;
