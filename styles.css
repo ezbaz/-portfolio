@@ -149,12 +149,20 @@ a {
 }
 
 .hero h1 span {
-  display: block;
   white-space: nowrap;
 }
 
-.hero-break-mobile {
-  display: none;
+.hero h1 span:nth-child(1),
+.hero h1 span:nth-child(2) {
+  display: inline-block;
+}
+
+.hero h1 span:nth-child(2) {
+  margin-left: 0.26em;
+}
+
+.hero h1 span:nth-child(3) {
+  display: block;
 }
 
 .hero p {
@@ -762,8 +770,9 @@ footer a:hover {
     font-size: clamp(42px, 10vw, 64px);
   }
 
-  .hero-break-mobile {
-    display: block;
+  .hero h1 span {
+    display: block !important;
+    margin-left: 0 !important;
   }
 
   .case-hero {
