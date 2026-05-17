@@ -539,6 +539,10 @@ footer a:hover {
   background-image: url("castrofitness/castrofitnesshero.webp");
 }
 
+.case-hero--clarity {
+  background-image: url("clarity/clearhero2.webp");
+}
+
 .case-hero-inner h1 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
